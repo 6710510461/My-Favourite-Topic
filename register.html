@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration - PSU</title>
+</head>
+<body>
+
+   
+    <header>
+        <h1>PSU Student Workshop Registration</h1>
+        <p>Register for the upcoming Full Stack Web Development seminar.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about-course">Course Info</a></li>
+            <li><a href="#registration-form">Register Now</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about-course">
+            <h2>About This Workshop</h2>
+            <p>Hands-on session covering HTML5 semantics, accessible web forms, and client validation.</p>
+        </section>
+
+        <section id="registration-form">
+            <h2>Registration Form</h2>
+            
+            <form action="signup.php" method="post">
+                
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Somchai Prasert">
+                </p>
+
+                <p>
+                    <label for="student-email">Email Address (@psu.ac.th):</label><br>
+                    <input type="email" id="student-email" name="email" required placeholder="s6710510461@psu.ac.th">
+                </p>
+
+                <p>
+                    <label for="phone">Thai Mobile Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="0[689][0-9]{8}" title="10-digit mobile number starting with 06, 08, or 09" required placeholder="0812345678">
+                </p>
+
+                <p>
+                    <label for="year">Academic Year (1 - 4):</label><br>
+                    <input type="number" id="year" name="year" min="1" max="4" required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob" required>
+                </p>
+
+                <fieldset>
+                    <legend>Preferred Session Format</legend>
+                    <label>
+                        <input type="radio" name="format" value="onsite" required> On-site (Hat Yai Campus)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="format" value="online"> Online (Zoom Meeting)
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="questions">Any dietary restrictions or questions?</label><br>
+                    <textarea id="questions" name="questions" rows="4" cols="40" placeholder="Optional comments..."></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Submit Registration</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faculty of Management Sciences, Prince of Songkla University.</p>
+    </footer>
+
+</body>
+</html>
